@@ -102,6 +102,7 @@ const GolfScorecard = () => {
                 {[...Array(18)].map((_, i) => (
                   <th key={i}>Hole {i + 1}</th>
                 ))}
+                <th>Total Score</th>
               </tr>
             </thead>
             <tbody>
@@ -113,6 +114,12 @@ const GolfScorecard = () => {
                       {scores[holeIndex + 1] && scores[holeIndex + 1][playerIndex]}
                     </td>
                   ))}
+                  <td>
+                    {Object.values(scores).reduce(
+                      (total, holeScores) => total + parseFloat(holeScores[playerIndex] || 0),
+                      0
+                    )}
+                  </td>
                 </tr>
               ))}
             </tbody>
