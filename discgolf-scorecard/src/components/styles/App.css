@@ -1,0 +1,29 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 80%;
+  max-width: 600px;
+}
+
+/* Additional styling for the top and bottom divs, adjust as needed */
+.top-div {
+  margin-bottom: 20px;
+}
+
+.bottom-div {
+  /* Add styling for the bottom div if needed */
+}
+
+/* Styling for input fields, buttons, etc. */
+input,
+button {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
