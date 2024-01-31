@@ -36,7 +36,7 @@ const GolfScorecard = () => {
   };
 
   const goToPreviousHole = () => {
-    if (currentHole > 1) {
+    if (currentHole > 0) {
       setCurrentHole(currentHole - 1);
     }
   };
