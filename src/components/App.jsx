@@ -133,14 +133,14 @@ const GolfScorecard = () => {
           <h2>Scorecard</h2>
 
           {/* Table for Holes 1-9 */}
-          <table>
+          <table className='top-table'>
             <thead>
               <tr>
                 <th>Player</th>
                 {[...Array(9)].map((_, i) => (
-                  <th key={i}>Hole {i + 1}</th>
+                  <th key={i}>{i + 1}</th>
                 ))}
-                <th>Front Nine</th>
+                <th>F9</th>
               </tr>
             </thead>
             <tbody>
@@ -164,14 +164,14 @@ const GolfScorecard = () => {
           </table>
 
           {/* Table for Holes 10-18 */}
-          <table>
+          <table className='bottom-table'>
             <thead>
               <tr>
                 <th>Player</th>
                 {[...Array(9)].map((_, i) => (
-                  <th key={i}>Hole {i + 10}</th>
+                  <th key={i}>{i + 10}</th>
                 ))}
-                <th>Back Nine</th>
+                <th>B9</th>
                 <th>Total</th>
               </tr>
             </thead>

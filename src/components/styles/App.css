@@ -1,9 +1,7 @@
 body {
+  background-color: lightblue;
   
 }
-
-
-
 .top-div {
   margin-bottom: 20px;
   width: 100%;
@@ -11,14 +9,12 @@ body {
 .score-input-section{
   width:100%;
 }
-
 .player-input-container{
   display:flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
-
 input,
 button {
   margin-bottom: 10px;
@@ -26,25 +22,47 @@ button {
   padding: 5px;
 }
 
+
+
+
 .bottom-div {
   margin-top: 10px; /* Adjust as needed */
   width: 100%;
 
 }
 
-  table {
-    width: 100%;
-    border-collapse: collapse;
-  }
+.top-table{
+  margin-bottom: 30px;
+}
 
-  th, td {
-    border: 1px solid #ddd;
-    padding: 2px;
-    text-align: center;
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 5px 0px;
+  text-align: center;
+  font-size: 10px;
+}
 
 
+/* Set specific widths for columns */
+th:first-child,
+td:first-child {
+  width: 10%; /* Adjust as needed */
+}
 
+th:not(:first-child):not(:last-child),
+td:not(:first-child):not(:last-child) {
+  width: 7%; /* Adjust as needed */
+}
+
+th:last-child,
+td:last-child {
+  width: 10%; /* Adjust as needed */
+}
 
 
 
