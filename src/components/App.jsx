@@ -92,7 +92,7 @@ const GolfScorecard = () => {
       </div>
       
       {/* Bottom Div - Scorecard Display */}
-      {currentHole > 0 && (
+      {/* {currentHole > 0 && (
         <div className="bottom-div">
           <h2>Scorecard</h2>
           <table>
@@ -125,10 +125,86 @@ const GolfScorecard = () => {
             </tbody>
           </table>
         </div>
+      )} */}
+
+
+      {currentHole > 0 && (
+        <div className="bottom-div">
+          <h2>Scorecard</h2>
+
+          {/* Table for Holes 1-9 */}
+          <table>
+            <thead>
+              <tr>
+                <th>Player</th>
+                {[...Array(9)].map((_, i) => (
+                  <th key={i}>Hole {i + 1}</th>
+                ))}
+                <th>Front Nine</th>
+              </tr>
+            </thead>
+            <tbody>
+              {players.map((player, playerIndex) => (
+                <tr key={playerIndex}>
+                  <td>{player}</td>
+                  {[...Array(9)].map((_, holeIndex) => (
+                    <td key={holeIndex}>
+                      {scores[holeIndex + 1] && scores[holeIndex + 1][playerIndex]}
+                    </td>
+                  ))}
+                  <td>
+                    {Object.values(scores).slice(0, 9).reduce(
+                      (total, holeScores) => total + parseFloat(holeScores[playerIndex] || 0),
+                      0
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+
+          {/* Table for Holes 10-18 */}
+          <table>
+            <thead>
+              <tr>
+                <th>Player</th>
+                {[...Array(9)].map((_, i) => (
+                  <th key={i}>Hole {i + 10}</th>
+                ))}
+                <th>Back Nine</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              {players.map((player, playerIndex) => (
+                <tr key={playerIndex}>
+                  <td>{player}</td>
+                  {[...Array(9)].map((_, holeIndex) => (
+                    <td key={holeIndex}>
+                      {scores[holeIndex + 10] && scores[holeIndex + 10][playerIndex]}
+                    </td>
+                  ))}
+                  <td>
+                    {Object.values(scores).slice(9).reduce(
+                      (total, holeScores) => total + parseFloat(holeScores[playerIndex] || 0),
+                      0
+                    )}
+                  </td>
+                  <td>
+                      {Object.values(scores).reduce(
+                        (total, holeScores) => total + parseFloat(holeScores[playerIndex] || 0),
+                        0
+                      )}
+                    </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       )}
       
-    </div>
-  );
-};
+    </div> //end of container div
+  ); //end of return
+}; //end of scorecard function
 
 export default GolfScorecard;

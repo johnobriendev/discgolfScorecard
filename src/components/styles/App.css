@@ -2,9 +2,7 @@ body {
   
 }
 
-.container {
-  width: 420px;
-}
+
 
 .top-div {
   margin-bottom: 20px;
@@ -41,7 +39,7 @@ button {
 
   th, td {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 2px;
     text-align: center;
   }
 
