@@ -80,10 +80,17 @@ td:last-child {
 
 @media all and (min-width: 1024px) {
 
+.container{
+  padding:30px;
+}  
+
 .top-div{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }  
+
+
 .score-input-section{
   width:20%;
 }
