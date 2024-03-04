@@ -3,3 +3,5 @@ This application is a scorecard for disc golf! Users begin by entering the playe
 
 # Description
 This is a variation of the Odin Project's CV project. The idea was to have users input information on one side of the page and have it displayed on the other side using React's useState hook. Instead of creating a CV, I created something my friends and I could use, a disc golf score card! Current Hole, New Player, Players, and Scores are all stored in useStates.
+
+I eventually want to add a backend where the user can store different scores for different courses and statistics like average score and average overpar will be available.

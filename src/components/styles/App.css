@@ -2,25 +2,29 @@
   box-sizing: border-box;
 }
 
+/* Mobile */
 
 body {
-  background-color: lightblue;
+  background-color: rgb(230, 230, 230);
   padding: 10px;
-  
 }
+
 .top-div {
   margin-bottom: 20px;
   width: 100%;
 }
+
 .score-input-section{
   width:100%;
 }
+
 .player-input-container{
   display:flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
+
 input,
 button {
   margin-bottom: 10px;
@@ -32,7 +36,7 @@ button {
 
 
 .bottom-div {
-  margin-top: 10px; /* Adjust as needed */
+  margin-top: 10px; 
   width: 100%;
 
 }
@@ -47,10 +51,10 @@ table {
 }
 
 th, td {
-  border: 1px solid #ddd;
+  border: 1px solid black;
   padding: 5px 0px;
   text-align: center;
-  font-size: 10px;
+  font-size: 16px;
 }
 
 
@@ -72,3 +76,17 @@ td:last-child {
 
 
 
+/* Desktop */
+
+@media all and (min-width: 1024px) {
+
+.top-div{
+  display: flex;
+  justify-content: center;
+}  
+.score-input-section{
+  width:20%;
+}
+
+
+ }
