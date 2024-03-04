@@ -43,6 +43,7 @@ const GolfScorecard = () => {
 
   return (
     <div className="container">
+     
       {/* Top Div */}
       <div className="top-div">
         {/* Player Name Input Section */}
