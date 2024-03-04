@@ -48,7 +48,7 @@ const GolfScorecard = () => {
       <div className="top-div">
         {/* Player Name Input Section */}
         {currentHole === 0 && (
-          <div>
+          <div className='player-input'>
             <input
               type="text"
               value={newPlayer}
@@ -61,7 +61,7 @@ const GolfScorecard = () => {
 
         {/* Display Player Names */}
         {players.length > 0 && currentHole === 0 && (
-          <div>
+          <div className='player-presubmit'>
             <h3>Player Names:</h3>
             <ul>
               {players.map((player, index) => (
